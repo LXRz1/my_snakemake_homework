@@ -61,11 +61,14 @@ These are the paths that must be modified in the config.yaml file：
 | `vmr_file`            | VMR_MSL38_v1.xlsx                          |
 | `scripts`             | absolute paths to the `scripts`            |
 | `hsblastn`            |                                            |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the hs-blastn         |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta          |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the hs-blastn            |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta             |
 | `megablastn`          |                                            |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the blastn            |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta absolute |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the blastn               |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta absolute    |
+| `checkv`              |                                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the checkv               |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`database`| absolute paths to the CheckV Database   |
 
 When you have prepared the input files and the config.yaml file, execute the following command to run the pipeline:
 
