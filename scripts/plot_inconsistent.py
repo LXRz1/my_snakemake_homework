@@ -29,6 +29,7 @@ def plot_hist(input_files, output_file):
 
     inconsistent_number_counts = inconsistent_number_counts.sort_index()
 
+    plt.figure(figsize=(12, 8))
     plt.bar(inconsistent_number_counts.index, 
             inconsistent_number_counts.values)
 

@@ -37,14 +37,23 @@ def plot(target_files, output):
     df = np.log(df)
     df = df.replace([np.inf, -np.inf], 0)
 
-    plt.figure(figsize=(25, 25))
+    plt.figure(figsize=(70, 30))
     ax = sns.heatmap(df,
                      cmap=sns.color_palette("rocket_r", 20),
                      linewidths=0.05,
                      linecolor='white',
                      cbar_kws={'label': 'Contigs Number(log scale)'})
+    
+    cbar = ax.collections[0].colorbar
+    cbar.ax.tick_params(labelsize=30)
+    ax.figure.axes[-1].yaxis.label.set_size(30)
+
     ax.set(xlabel="", ylabel="")
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right')
+    ax.set_xticklabels(ax.get_xticklabels(), fontsize=15, 
+                       rotation=45, ha='right')
+    ax.set_yticklabels(ax.get_yticklabels(), fontsize=30)
+    ax.set_title('Distribution of Contig counts at the Family Rank', 
+                 fontsize=30)
     plt.yticks(rotation=0)
     plt.savefig(output)
 

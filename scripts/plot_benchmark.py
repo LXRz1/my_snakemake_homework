@@ -48,23 +48,29 @@ def plot_hist(input_files, output_file):
     cpu_load_data = [cpu_load[software] for software in labels]
 
     #################################################################
-    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(8, 15))
+    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(10, 15))
     bplot1 = ax1.boxplot(run_time_data,
                          labels=labels, vert=True, patch_artist=True)
-    ax1.set_ylabel('minutes')
+    ax1.set_ylabel('minutes', fontsize=20)
+    ax1.set_xticklabels(ax1.get_xticklabels(), fontsize=20)
+    ax1.set_yticklabels(ax1.get_yticklabels(), fontsize=20)
     ax1.set_yscale('log')
-    ax1.set_title('Time')
+    ax1.set_title('Time', fontsize=20)
     #################################################################
     bplot2 = ax2.boxplot(memory_data,
                          labels=labels, vert=True, patch_artist=True)
-    ax2.set_ylabel('Gigabytes')
+    ax2.set_ylabel('Gigabytes', fontsize=20)
+    ax2.set_xticklabels(ax2.get_xticklabels(), fontsize=20)
+    ax2.set_yticklabels(ax2.get_yticklabels(), fontsize=20)
     ax2.set_yscale('log')
-    ax2.set_title('Memory')
+    ax2.set_title('Memory', fontsize=20)
     #################################################################
     bplot3 = ax3.boxplot(cpu_load_data,
                          labels=labels, vert=True, patch_artist=True)
-    ax3.set_ylabel('Avg # Cpus Utilized')
-    ax3.set_title('CPU Load')
+    ax3.set_xticklabels(ax3.get_xticklabels(), fontsize=20)
+    ax3.set_yticklabels(ax3.get_yticklabels(), fontsize=20)
+    ax3.set_ylabel('Avg # Cpus Utilized', fontsize=20)
+    ax3.set_title('CPU Load', fontsize=20)
     #################################################################
     # fill with colors
     colors = ['pink', 'lightblue', 'lightgreen']

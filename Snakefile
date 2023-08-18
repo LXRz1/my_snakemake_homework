@@ -26,7 +26,7 @@ rule all:
            
            # plot diamond families contig number heatmap
            expand("05.AllDiamondExtractTaxon/" \
-                  "diamond_{taxon}.FamilyContigNum.heatmap.png", \
+                  "diamond_{taxon}.FamilyContigNum.heatmap.pdf", \
                   taxon=config["target_taxons"]),
            
            # all diamond extract target taxonomy add checkv quality
@@ -37,7 +37,7 @@ rule all:
     
            # plot diamond families contig quality number heatmap
            expand("06.AllDiamondExtractTaxonAddQuality/" \
-                  "diamond_{taxon}.FamilyQualityNum.heatmap.png", \
+                  "diamond_{taxon}.FamilyQualityNum.heatmap.pdf", \
                   taxon=config["target_taxons"]),
            
            # all diamond extract target taxonomy contig
@@ -57,7 +57,7 @@ rule all:
                   taxon=config["target_taxons"]),
            
            # plot different alignment softwares benchmark
-           "benchmarks/benchmarks.png",
+           "benchmarks/benchmarks.pdf",
          
            # different alignment softwares add taxonomy
            expand("09.AllDiamondExtractContigAlignAddTaxon/{taxon}/" \
@@ -70,9 +70,9 @@ rule all:
                   "{taxon}/{sample}_{taxon}.compare_software.txt", \
                   sample=samples, taxon=config["target_taxons"]),
            
-           # plot different softwares alignment inconsistent
+           # plot different software unclassified family contig number venn
            expand("10.CompareAlignmentSoftware/" \
-                  "{taxon}.compare_software.inconsistent.png", \
+                  "Viruses.compare_software.UnclassifiedFamily.pdf", \
                   taxon=config["target_taxons"]),
            
            # extract all software unclassified family contig
@@ -237,7 +237,7 @@ rule plot_benchmark:
                    "{sample}.{software}.benchmark.txt", \
                    sample=samples, software=softwares, \
                    taxon=config["target_taxons"])
-    output: "benchmarks/benchmarks.png"
+    output: "benchmarks/benchmarks.pdf"
     params: scripts = config['scripts']
     log:    stdout = 'logs/plot_benchmark/plot_benchmark.stdout',
             stderr = 'logs/plot_benchmark/plot_benchmark.stderr'
@@ -267,7 +267,7 @@ rule diamond_family_contig_number_heatmap:
                    "{taxon}/{sample}.diamond_{taxon}.txt", \
                    sample=samples, taxon=config["target_taxons"])
     output: "05.AllDiamondExtractTaxon/" \
-            "diamond_{taxon}.FamilyContigNum.heatmap.png"
+            "diamond_{taxon}.FamilyContigNum.heatmap.pdf"
     params: scripts = config['scripts']
     log:    stdout = 'logs/diamond_family_contig_number_heatmap/' \
                      '{taxon}/diamond.stdout',
@@ -300,7 +300,7 @@ rule diamond_family_quality_number_heatmap:
                    "{sample}.diamond_{taxon}.add_quality.txt", \
                    sample=samples, taxon=config["target_taxons"])
     output: "06.AllDiamondExtractTaxonAddQuality/" \
-            "diamond_{taxon}.FamilyQualityNum.heatmap.png"
+            "diamond_{taxon}.FamilyQualityNum.heatmap.pdf"
     params: scripts = config['scripts']
     log:    stdout = 'logs/diamond_family_quality_number_heatmap/' \
                      '{taxon}/diamond.stdout',
@@ -339,17 +339,21 @@ rule compare_different_align_software:
               "1> {log.stdout} "
               "2> {log.stderr}")
 
-rule plot_diff_software_inconsistent:
-    input:  expand("10.CompareAlignmentSoftware/" \
-                   "{taxon}/{sample}_{taxon}.compare_software.txt", \
-                   sample=samples, taxon=config["target_taxons"])
+rule plot_unclassified_family_venn:
+    input:  diamond = expand("06.AllDiamondExtractTaxonAddQuality/{taxon}/" \
+                             "{sample}.diamond_{taxon}.add_quality.txt", \
+                             sample=samples, taxon=config["target_taxons"]),
+            other = expand("09.AllDiamondExtractContigAlignAddTaxon/{taxon}/"\
+                           "{software}/{sample}.{software}_addtaxonomy.txt", \
+                           sample=samples, taxon=config["target_taxons"], \
+                           software=softwares),
     output: "10.CompareAlignmentSoftware/" \
-            "{taxon}.compare_software.inconsistent.png"
+            "{taxon}.compare_software.UnclassifiedFamily.pdf"
     params: scripts = config['scripts']
-    log:    stdout = 'logs/plot_diff_software_inconsistent/{taxon}.stdout',
-            stderr = 'logs/plot_diff_software_inconsistent/{taxon}.stderr'
-    shell:  "python3 {params.scripts}/plot_inconsistent.py "
-            "-i {input} -o {output} "
+    log:    stdout = 'logs/plot_unclassified_family_venn/{taxon}.stdout',
+            stderr = 'logs/plot_unclassified_family_venn/{taxon}.stderr'
+    shell:  "python3 {params.scripts}/plot_venn.py "
+            "-i {input.diamond} {input.other} -o {output} "
             "1> {log.stdout} "
             "2> {log.stderr}"
 
