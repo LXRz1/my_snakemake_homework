@@ -51,8 +51,8 @@ This pipeline does not involve additional manual steps, such as contig assembly 
 Additionally, you need to configure the `config.yaml` file by replace the absolute paths for the required software or databases.
 
 These are the paths that must be modified in the config.yaml file:
-- `contigs_path`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contigs for all samples
-- `diamond_path`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diamond alignment result for all samples
+- `contigs_path`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contigs for all samples
+- `diamond_path`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diamond alignment result for all samples
 - `accession2taxadb`&nbsp;&nbsp;&nbsp;accessionTaxa.sql
 - `names_dmp`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;names.dmp
 - `vmr_file`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMR_MSL38_v1.xlsx
