@@ -46,6 +46,7 @@ And we need the `names.dmp` file.
 * [VMR_MSL38_v1.xlsx](https://ictv.global/vmr/current)
 
 ## Usage
+First, you need to configure your `config.yaml` file by entering the absolute paths for the required software or databases.
 This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.You need to perform sequence assembly and Diamond alignment beforehand. The file name format for Contig sequences is: `{sample_name}_contigs.fasta`, and the result file name format for Diamond alignment is: `{sample_name}_contigs_taxonomy_info.tsv`.
 
 
