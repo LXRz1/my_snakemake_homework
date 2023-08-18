@@ -37,11 +37,16 @@ If you install the taxonomizr R package, you need to prepare an SQLite database 
 #### NCBI taxonomy
 * [taxdump.tar.gz](https://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz)
 
-Unzip it:
+Unzip:
 
 `tar zxvf taxdump.tar.gz`
 
 And we need the `names.dmp` file.
 #### ICTV Virus Metadata Resource spreadsheet
 * [VMR_MSL38_v1.xlsx](https://ictv.global/vmr/current)
+
+## Usage
+This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.
+
+
 
