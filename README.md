@@ -51,18 +51,18 @@ This pipeline does not involve additional manual steps, such as contig assembly 
 Additionally, you need to configure the `config.yaml` file by replace the absolute paths for the required software or databases.
 
 These are the paths that must be modified in the config.yaml file:
-- `contigs_path` &nbsp;&nbsp;&nbsp;&nbsp; Contigs for all samples
-- `diamond_path`         Diamond alignment result for all samples
-- `accession2taxadb`     accessionTaxa.sql
-- `names_dmp`            names.dmp
-- `vmr_file`             VMR_MSL38_v1.xlsx
-- `scripts`              your absolute paths to the `scripts`
+- `contigs_path`     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contigs for all samples
+- `diamond_path`     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Diamond alignment result for all samples
+- `accession2taxadb` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; accessionTaxa.sql
+- `names_dmp`        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; names.dmp
+- `vmr_file`         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VMR_MSL38_v1.xlsx
+- `scripts`          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absolute paths to the `scripts`
 - `hsblastn`
-  - `path`               your hs-blastn absolute path
-  - `index`              your nt fasta absolute
+  - `path`           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hs-blastn absolute path
+  - `index`          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nt fasta absolute path
 - `megablastn`
-  -  `path`              your blastn absolute path
-  -  `index`             your nt fasta absolute
+  -  `path`          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; blastn absolute path
+  -  `index`         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nt fasta absolute path
 
 
 
