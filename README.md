@@ -20,7 +20,7 @@ If you install CheckV using conda or pip you will need to download the database:
 Download nt fasta:
 * [nt fasta](https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
-And build blastn index:
+And build blastn index(hs-blastn does not require building an index beforehand. Only need to provide the FASTA sequences):
 
 `gunzip nt.gz`
 
@@ -46,16 +46,16 @@ And we need the `names.dmp` file.
 * [VMR_MSL38_v1.xlsx](https://ictv.global/vmr/current)
 
 ## Usage
-This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.You need to perform sequence assembly and Diamond alignment beforehand. 
+This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.You need to perform sequence assembly and Diamond alignment beforehand. The file name format for Contig sequences is: `{sample_name}_contigs.fasta`, and the result file name format for Diamond alignment is: `{sample_name}_contigs_taxonomy_info.tsv`.
 
 First, you need to configure your `config.yaml` file by entering the absolute paths for the required software or databases.
 
 Such as:
-- `contigs_path`               /path/to/{sample_name}_contigs.fasta(suffix should be `_contigs.fasta`)
-- `diamond_path`               /path/to/{sample_name}_contigs_taxonomy_info.tsv(suffix should be `_contigs_taxonomy_info.tsv`)
-- `accession2taxadb`           /path/to/accessionTaxa.sql
-- `names_dmp`                  /path/to/names.dmp
-- `vmr_file`                   /path/to/VMR_MSL38_v1.xlsx
+- `contigs_path`         Contigs for all samples
+- `diamond_path`         Diamond alignment result for all samples
+- `accession2taxadb`     accessionTaxa.sql
+- `names_dmp`            names.dmp
+- `vmr_file`             VMR_MSL38_v1.xlsx
 
 
 
