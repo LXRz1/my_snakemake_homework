@@ -3,10 +3,10 @@ A collection of scripts and pipelines is used to process Spades-assembled contig
 
 ## Dependencies
 ### Software
-* [snakemake](https://github.com/snakemake/snakemake)
-* [hs-blastn](https://github.com/chenying2016/queries/tree/master/hs-blastn-src)
-* [blastn](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
-* [checkv](https://bitbucket.org/berkeleylab/checkv/src/master/)
+* [snakemake](https://github.com/snakemake/snakemake) v7.26.0
+* [hs-blastn](https://github.com/chenying2016/queries/tree/master/hs-blastn-src) v2.0.0
+* [blastn](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) v2.14.0+
+* [checkv](https://bitbucket.org/berkeleylab/checkv/src/master/) v1.0.1
 ### R package
 * [taxonomizr](https://cran.r-project.org/web/packages/taxonomizr/index.html)
 
