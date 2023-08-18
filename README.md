@@ -50,14 +50,19 @@ This pipeline does not involve additional manual steps, such as contig assembly 
 
 Additionally, you need to configure the `config.yaml` file by replace the absolute paths for the required software or databases.
 
-Such as:
+These are the paths that must be modified in the config.yaml file:
 - `contigs_path`         Contigs for all samples
 - `diamond_path`         Diamond alignment result for all samples
 - `accession2taxadb`     accessionTaxa.sql
 - `names_dmp`            names.dmp
 - `vmr_file`             VMR_MSL38_v1.xlsx
-
-
+- `scripts`              your absolute paths to the `scripts`
+- `hsblastn`
+  - `path`               your hs-blastn absolute path
+  - `index`              your nt fasta absolute
+- `megablastn`
+  -  `path`              your blastn absolute path
+  -  `index`             your nt fasta absolute
 
 
 
