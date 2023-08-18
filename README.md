@@ -10,13 +10,13 @@ A collection of scripts and pipelines is used to process Spades-assembled contig
 ### R package
 * [taxonomizr](https://cran.r-project.org/web/packages/taxonomizr/index.html)
 
-## Database
-### CheckV Database
+### Database
+#### CheckV Database
 If you install CheckV using conda or pip you will need to download the database:
 
 `checkv download_database ./`
 
-### NT Database
+#### NT Database
 Download nt fasta:
 * [nt fasta](https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
@@ -26,15 +26,15 @@ And build blastn index:
 
 `makeblastdb -in nt -dbtype nucl`
 
-### SQLite Database
+#### SQLite Database
 If you install the taxonomizr R package, you need to prepare an SQLite database for mapping accession to taxonomy ID:
 
 `library(taxonomizr)`
 
 `prepareDatabase('accessionTaxa.sql')`
 
-### Other files
-#### NCBI taxonomy
+#### Other files
+##### NCBI taxonomy
 * [taxdump.tar.gz](https://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz)
 
 Unzip:
@@ -42,7 +42,7 @@ Unzip:
 `tar zxvf taxdump.tar.gz`
 
 And we need the `names.dmp` file.
-#### ICTV Virus Metadata Resource spreadsheet
+##### ICTV Virus Metadata Resource spreadsheet
 * [VMR_MSL38_v1.xlsx](https://ictv.global/vmr/current)
 
 ## Usage
