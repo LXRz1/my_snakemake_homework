@@ -1,7 +1,5 @@
 import glob
 
-configfile: "/home3/2812743l/share3/config.yaml"
-
 contigs_path = config['contigs_path']
 samples = []
 for path in glob.glob(f'{contigs_path}/*_contigs.fasta'):
