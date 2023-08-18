@@ -33,7 +33,7 @@ If you install the taxonomizr R package, you need to prepare an SQLite database 
 
 `prepareDatabase('accessionTaxa.sql')`
 
-### Other
+### Other files
 Download:
 
 * [taxdump.tar.gz](https://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz)
