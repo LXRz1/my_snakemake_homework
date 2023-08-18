@@ -34,9 +34,11 @@ If you install the taxonomizr R package, you need to prepare an SQLite database 
 `prepareDatabase('accessionTaxa.sql')`
 
 ### Other
-Download this file:
 * [taxdump.tar.gz](https://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz)
+
 Unzip it:
+
 `tar zxvf taxdump.tar.gz`
+
 And we need the `names.dmp` file.
 
