@@ -1,4 +1,5 @@
-contigs_path: "/path/to/01.AllContigs"
+contigs_path: "/path/to/Contigs"
+diamond_path: "/path/to/Diamond"
 accession2taxadb: "/path/to/accessionTaxa.sql"
 names_dmp: "/path/to/names.dmp"
 vmr_file: "/path/to/VMR_MSL38_v1.xlsx"
