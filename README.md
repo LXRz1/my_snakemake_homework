@@ -16,7 +16,7 @@ If you install CheckV using conda or pip you will need to download the database:
 
 `checkv download_database ./`
 
-### NT database
+### NT Database
 Download nt fasta:
 * [nt fasta](https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
@@ -26,7 +26,7 @@ And build blastn index:
 
 `makeblastdb -in nt -dbtype nucl`
 
-### accessionTaxa.sql
+### SQLite Database
 If you install the taxonomizr R package, you need to prepare an SQLite database for mapping accession to taxonomy ID:
 
 `library(taxonomizr)`
