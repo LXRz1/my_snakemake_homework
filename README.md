@@ -51,11 +51,11 @@ This pipeline does not involve additional manual steps, such as contig assembly 
 First, you need to configure your `config.yaml` file by entering the absolute paths for the required software or databases.
 
 Such as:
-- `contigs_path`       /path/to/{sample_name}_contigs.fasta(suffix should be `_contigs.fasta`)
-- `diamond_path`       /path/to/{sample_name}_contigs_taxonomy_info.tsv(suffix should be `_contigs_taxonomy_info.tsv`)
-- `accession2taxadb`   /path/to/accessionTaxa.sql
-- `names_dmp`          /path/to/names.dmp
-- `vmr_file`           /path/to/VMR_MSL38_v1.xlsx
+- `contigs_path`               /path/to/{sample_name}_contigs.fasta(suffix should be `_contigs.fasta`)
+- `diamond_path`               /path/to/{sample_name}_contigs_taxonomy_info.tsv(suffix should be `_contigs_taxonomy_info.tsv`)
+- `accession2taxadb`           /path/to/accessionTaxa.sql
+- `names_dmp`                  /path/to/names.dmp
+- `vmr_file`                   /path/to/VMR_MSL38_v1.xlsx
 
 
 
