@@ -46,7 +46,7 @@ And we need the `names.dmp` file.
 * [VMR_MSL38_v1.xlsx](https://ictv.global/vmr/current)
 
 ## Usage
-This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.
+This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.You need to perform sequence assembly and Diamond alignment beforehand. The file name format for Contig sequences is: `{sample_name}_contigs.fasta`, and the result file name format for Diamond alignment is: `{sample_name}_contigs_taxonomy_info.tsv`.
 
 
 
