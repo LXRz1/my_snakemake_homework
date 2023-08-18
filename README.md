@@ -63,7 +63,7 @@ These are the paths that must be modified in the `config.yaml`：
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta             |
 | `megablastn`          |                                            |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the blastn               |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta absolute    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta             |
 | `checkv`              |                                            |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the checkv               |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`database`| absolute paths to the CheckV Database   |
