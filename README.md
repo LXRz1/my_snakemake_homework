@@ -49,7 +49,9 @@ And we need the `names.dmp` file.
 This pipeline does not involve additional manual steps, such as contig assembly and Diamond alignment.You need to complete sequence assembly and Diamond alignment in advance. These are the required input files for the pipeline. The file format for Contig sequences is: `{sample_name}_contigs.fasta`, and the file format for Diamond alignment results is: `{sample_name}_contigs_taxonomy_info.tsv`.
 
 Additionally, you need to configure the `config.yaml` file by replace the absolute paths for the required software or databases.
- 
+
+These are the paths that must be modified in the config.yaml file：
+
 | Path                  | Description                                |
 |-----------------------|--------------------------------------------|
 | `contigs_path`        | Contigs for all samples                    |
@@ -65,7 +67,6 @@ Additionally, you need to configure the `config.yaml` file by replace the absolu
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the blastn            |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`index`| absolute paths to the nt fasta absolute |
 
+When you have prepared the input files and the config.yaml file, execute the following command to run the pipeline:
 
-
-
-
+`snakemake --configfile config.yaml --snakefile Snakefile --cores {threads}`
