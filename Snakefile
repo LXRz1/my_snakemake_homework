@@ -112,7 +112,7 @@ rule summary_all_chekcv_quality:
             "2> {log.stderr}"
 
 rule diamond_add_taxonomy_name:
-    input:  "03.AllDiamond/{sample}_contigs_taxonomy_info.tsv"
+    input:  lambda wildcards: f"{config['diamond_path']}/{wildcards.sample}_contigs_taxonomy_info.tsv"
     output: "04.AllDiamondAddTaxon/{sample}.diamond_addtaxonomy.txt"
     params: names_dmp = config["names_dmp"],
             scripts = config['scripts'],
