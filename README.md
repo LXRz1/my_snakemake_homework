@@ -50,7 +50,7 @@ This pipeline does not involve additional manual steps, such as contig assembly 
 
 Additionally, you need to configure the `config.yaml` file by replace the absolute paths for the required software or databases.
 
-These are the paths that must be modified in the config.yaml file：
+These are the paths that must be modified in the `config.yaml`：
 
 | Path                  | Description                                |
 |-----------------------|--------------------------------------------|
@@ -70,6 +70,6 @@ These are the paths that must be modified in the config.yaml file：
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path` | absolute paths to the checkv               |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`database`| absolute paths to the CheckV Database   |
 
-When you have prepared the input files and the config.yaml file, execute the following command to run the pipeline:
+When you have prepared the input files and the `config.yaml`, execute the following command to run the pipeline:
 
 `snakemake --configfile config.yaml --snakefile Snakefile --cores {threads}`
