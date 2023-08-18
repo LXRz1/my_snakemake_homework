@@ -16,3 +16,8 @@ If you install CheckV using conda or pip you will need to download the database:
 
 ##### NT database
 * [nt fasta](https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
+
+And build blastn index:
+
+`gunzip nt.gz`
+`makeblastdb -in nt -dbtype nucl`
