@@ -1,38 +1,28 @@
-contigs_path: "/home3/2812743l/share3/01.AllContigs"
-accession2taxadb: "/home3/2812743l/share/database/accession2taxa/accessionTaxa.sql"
-names_dmp: "/home3/2812743l/share/taxdump/names.dmp"
-vmr_file: "/home3/2812743l/share/VMR_MSL38_v1.xlsx"
-scripts: "/home3/2812743l/share3/scripts"
+contigs_path: "/path/to/01.AllContigs"
+accession2taxadb: "/path/to/accessionTaxa.sql"
+names_dmp: "/path/to/names.dmp"
+vmr_file: "/path/to/VMR_MSL38_v1.xlsx"
+scripts: "/path/to/scripts"
 target_taxons:
   Viruses:
     rank: superkingdom
     taxid: 10239
 software:
   hsblastn:
-    path: "hs-blastn"
-    index: "/home3/2812743l/share/database/nt_viruses_database/nt-viral.fna"
-    #index: "/home3/2812743l/share/database/refseq_complete_viral/refseq_complete_viral.fna"
+    path: "/path/to/hs-blastn"
+    index: "/path/to/nt.fna"
     max_hsps: 1
     max_target_seqs: 1
     evalue: "1e-5"
     threads: 1
   megablastn:
-    path: "blastn"
-    index: "/home3/2812743l/share/database/nt_viruses_database/megablastn_index/nt-viral.fna"
-    #index: "/home3/2812743l/share/database/refseq_complete_viral/megablastn_index/refseq_complete_viral.fna"
+    path: "/path/to/blastn"
+    index: "/path/to/nt.fna"
     max_hsps: 1
     max_target_seqs: 1
     evalue: "1e-5"
     threads: 1
-    #usearch:
-    #  path: "/software/usearch-v11.0.667/usearch11.0.667_i86linux64"
-    #  index: "/home3/2812743l/share/database/nt_viruses_database/usearch_ublast_index/nt-viral.udb"
-    #  #index: "/home3/2812743l/share/database/refseq_complete_viral/usearch_ublast_index/refseq_complete_viral.udb"
-    #  max_hsps: 1
-    #  max_target_seqs: 1
-    #  evalue: "1e-5"
-    #  threads: 1
 checkv:
-  path: "/home3/2812743l/mambaforge/bin/checkv"
-  database: "/home3/2812743l/share/database/checkv-db-v1.5"
+  path: "/path/to/checkv"
+  database: "/path/to/checkv-db-v1.5"
   threads: 1
