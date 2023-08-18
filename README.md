@@ -13,3 +13,6 @@ A collection of scripts and pipelines is used to process Spades-assembled contig
 If you install CheckV using conda or pip you will need to download the database:
 
 `checkv download_database ./`
+
+##### NT database
+* [nt fasta](https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
